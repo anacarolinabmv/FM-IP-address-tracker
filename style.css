@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Rubik', sans-serif;
+}
+:root {
+  --Very-Dark-Gray: hsl(0, 0%, 17%);
+  --Dark-Gray: hsl(0, 0%, 59%);
+  --White: hsl(0, 0%, 100%);
+}
+body {
+  min-height: 100vh;
+  overflow: hidden;
+}
+html {
+  font-size: 62.5%;
+}
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: center/cover no-repeat url(images/pattern-bg-desktop.png);
+  padding: 3rem 3rem 0;
+}
+.heading {
+  color: var(--White);
+  font-size: 3.4rem;
+  margin-bottom: 3rem;
+  font-weight: 500;
+}
+.search {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  max-width: 56rem;
+}
+.input--search {
+  padding-left: 2rem;
+  border: none;
+  width: 100%;
+  border-radius: 12px 0 0 12px;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+.btn--search {
+  padding: 2.2rem;
+  border: none;
+  border-radius: 0 12px 12px 0;
+  background-color: var(--Very-Dark-Gray);
+  cursor: pointer;
+}
+.btn--search::placeholder {
+  font-size: 1.8rem;
+}
+.input--search,
+.btn--search:focus {
+  outline: none;
+}
+.tracker--information {
+  width: 100%;
+  max-width: 110rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 2rem;
+  background-color: var(--White);
+  transform: translateY(50%);
+  border-radius: 20px;
+  z-index: 999;
+}
+.ip--address,
+.location,
+.timezone,
+.isp {
+  width: 25%;
+  padding-left: 2rem;
+}
+.ip--address,
+.location,
+.timezone {
+  border-right: 1px solid var(--Dark-Gray);
+}
+.tracker--heading {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--Dark-Gray);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.tracker--paragraph {
+  font-size: 1.2rem;
+  color: var(--Very-Dark-Gray);
+  font-size: 2.8rem;
+  font-weight: 500;
+}
+main {
+  height: 70vh;
+}
+#map {
+  min-height: 100%;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0.4rem;
+  right: 0.4rem;
+  font-size: 11px;
+  text-align: center;
+  font-size: 1.4rem;
+  z-index: 999;
+  background-color: rgb(255, 255, 255, 0.8);
+  padding: 0.6rem 1rem;
+  border-radius: 12px;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  text-decoration: none;
+  font-weight: 500;
+}
