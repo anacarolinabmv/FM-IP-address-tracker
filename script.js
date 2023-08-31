@@ -20,7 +20,7 @@ const initMap = async function () {
   try {
     const geolocationResp = await getCurrentLocation();
     const { latitude: lat, longitude: lng } = geolocationResp.coords;
-    map = L.map('map').setView([lat, lng], 16);
+    map = L.map('map', { zoomControl: false }).setView([lat, lng], 16);
     L.marker([lat, lng]).addTo(map);
 
     L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
