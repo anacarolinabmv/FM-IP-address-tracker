@@ -45,7 +45,7 @@ const renderLocationOnMap = function (lat, lng) {
 const displayTrackerInfo = async function (apiURL, renderLocationFn) {
   try {
     const request = await fetch(apiURL);
-    if (!request.ok) throw new Error('Could not get IP address information');
+    if (!request.ok) throw new Error('Could not get IP address/domain information');
     const response = await request.json();
 
     if (renderLocationFn) {

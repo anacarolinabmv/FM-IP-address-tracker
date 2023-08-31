@@ -19,23 +19,25 @@ html {
   font-size: 62.5%;
 }
 header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  margin: 0 auto;
   background: center/cover no-repeat url(images/pattern-bg-desktop.png);
+  position: relative;
+  height: 35vh;
+  padding: 4rem;
 }
 .heading {
-  padding-top: 4rem;
   color: var(--White);
   font-size: 3.4rem;
   margin-bottom: 3rem;
   font-weight: 500;
+  text-align: center;
 }
 .search {
+  width: 100%;
+  margin: 0 auto;
   display: flex;
   align-items: stretch;
-  width: 100%;
+  justify-content: center;
   max-width: 56rem;
 }
 .input--search {
@@ -61,13 +63,16 @@ header {
   outline: none;
 }
 .tracker--information {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
   width: 100%;
   max-width: 110rem;
   display: flex;
   justify-content: space-between;
   padding: 3rem 2rem;
   background-color: var(--White);
-  transform: translateY(50%);
   border-radius: 20px;
   z-index: 999;
 }
@@ -81,7 +86,7 @@ header {
 .ip--address,
 .location,
 .timezone {
-  border-right: 1px solid var(--Dark-Gray);
+  border-right: 1px solid rgb(150, 150, 150);
 }
 .tracker--heading {
   font-size: 1.4rem;
@@ -99,16 +104,13 @@ header {
 
 main {
   /* height: 100%; */
-  height: 70vh;
+  height: 65vh;
   position: relative;
 }
 #map {
   height: 100%;
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  inset: 0;
 }
 
 .attribution {
@@ -127,4 +129,64 @@ main {
   color: hsl(228, 45%, 44%);
   text-decoration: none;
   font-weight: 500;
+}
+
+@media (max-width: 1100px) {
+  .tracker--information {
+    width: 90%;
+  }
+}
+@media (max-width: 800px) {
+  header {
+    height: 45vh;
+  }
+  main {
+    height: 55vh;
+  }
+  .tracker--heading {
+    text-align: center;
+  }
+
+  .tracker--information {
+    flex-direction: column;
+    padding: 2rem 4rem;
+  }
+  .ip--address,
+  .location,
+  .timezone,
+  .isp {
+    width: 100%;
+    padding: 1rem 0 0.4rem;
+    text-align: center;
+  }
+  .ip--address,
+  .location,
+  .timezone {
+    border-right: none;
+    border-bottom: 1px solid rgb(150, 150, 150, 0.3);
+  }
+
+  .input--search::placeholder {
+    font-size: 1.6rem;
+  }
+  .attribution {
+    right: 50%;
+    transform: translateX(50%);
+    width: 60%;
+  }
+}
+
+@media (max-width: 430px) {
+  .heading {
+    font-size: 2.8rem;
+  }
+  .input--search {
+    padding-left: 1rem;
+  }
+  .input--search::placeholder {
+    font-size: 1.3rem;
+  }
+  .attribution {
+    width: 90%;
+  }
 }
