@@ -64,7 +64,6 @@ const displayTrackerInfo = async function (apiURL, renderLocationFn) {
 
 const getIPDomain = function () {
   const input = inputSearch.value;
-
   const apiURL = `https://geo.ipify.org/api/v2/country,city?apiKey=at_koRC5qY2rJFwTOq83X1z63HWqIfmc&ipAddress=${input}&domain=${input}`;
 
   displayTrackerInfo(apiURL, renderLocationOnMap);
