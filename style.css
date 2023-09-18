@@ -176,9 +176,12 @@ html {
 }
 
 @media (max-width: 430px) {
-  .heading {
-    font-size: 2.8rem;
+  html {
+    font-size: 50%;
   }
+  /* .heading {
+    font-size: 2.8rem;
+  } */
   .input--search {
     padding-left: 1rem;
   }
